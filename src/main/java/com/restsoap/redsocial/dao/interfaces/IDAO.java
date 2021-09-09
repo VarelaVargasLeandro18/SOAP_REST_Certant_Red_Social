@@ -50,6 +50,6 @@ public interface IDAO<T, K> {
      * @param created 
      * @throws dao_abstract.exceptions.CreateEntityException 
      */
-    public void create ( T created ) throws CreateEntityException;
+    public T create ( T created ) throws CreateEntityException;
     
 }

@@ -27,12 +27,12 @@ public abstract class AbstractDAO<T,K> implements IDAO<T,K> {
         this.entityClass = entityClass;
     }
     
-    protected EntityManager getEntityManager() {
+    protected final EntityManager getEntityManager() {
         return JPAEntityManagerFactory.getEntityManager();
     }
 
     @Override
-    public T readOne(K id) throws ReadEntityException {
+    public final T readOne(K id) throws ReadEntityException {
         
         T findedEntity = null;
         
@@ -48,7 +48,7 @@ public abstract class AbstractDAO<T,K> implements IDAO<T,K> {
     }
 
     @Override
-    public List<T> readAll() throws ReadEntityException {
+    public final List<T> readAll() throws ReadEntityException {
         
         List<T> findedEntities;
         EntityManager em = this.getEntityManager();
@@ -70,7 +70,7 @@ public abstract class AbstractDAO<T,K> implements IDAO<T,K> {
     }
 
     @Override
-    public void delete(T entity) throws DeleteEntityException  {
+    public final void delete(T entity) throws DeleteEntityException  {
         try {
             this.getEntityManager().getTransaction().begin();
             entity = this.getEntityManager().merge(entity);
@@ -84,7 +84,7 @@ public abstract class AbstractDAO<T,K> implements IDAO<T,K> {
     }
 
     @Override
-    public T update(T updated) throws UpdateEntityException {
+    public final T update(T updated) throws UpdateEntityException {
         try {
             return this.getEntityManager().merge(updated);
         }
@@ -94,22 +94,23 @@ public abstract class AbstractDAO<T,K> implements IDAO<T,K> {
     }
     
     @Override
-    public void create( T created ) throws CreateEntityException {
+    public final T create( T created ) throws CreateEntityException {
         try {
             this.getEntityManager().getTransaction().begin();
             this.getEntityManager().persist(created);
             this.getEntityManager().getTransaction().commit();
+            return created;
         } catch ( Throwable ex ) {
             this.rollbackTransactions();
             throw new CreateEntityException(ex);
         }
     }
     
-    public void rollbackTransactions() {
+    public final void rollbackTransactions() {
         this.getEntityManager().getTransaction().rollback();
     }
     
-    public void commitTransactions() {
+    public final void commitTransactions() {
         this.getEntityManager().getTransaction().commit();
     }
     
