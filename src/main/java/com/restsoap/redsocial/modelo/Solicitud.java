@@ -13,7 +13,7 @@ public class Solicitud implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_solicitud",nullable=false)
-	private int idSolicitud;
+	private Long idSolicitud;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
@@ -28,11 +28,11 @@ public class Solicitud implements Serializable {
 	@JoinColumn(name="id_usuarioR")
 	private Usuario usuario2;
 
-	public int getIdSolicitud() {
+	public Long getIdSolicitud() {
 		return this.idSolicitud;
 	}
 
-	public void setIdSolicitud(int idSolicitud) {
+	public void setIdSolicitud(Long idSolicitud) {
 		this.idSolicitud = idSolicitud;
 	}
 

@@ -13,7 +13,7 @@ public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_usuario",nullable=false)
-	private int idUsuario;
+	private Long idUsuario;
 
 	private String ciudad;
 
@@ -21,9 +21,9 @@ public class Usuario implements Serializable {
 
 	private String correo;
 
-	private int edad;
+	private Long edad;
 
-	private int estado;
+	private Long estado;
 
 	private String foto;
 
@@ -66,11 +66,11 @@ public class Usuario implements Serializable {
 	@OneToMany(mappedBy="usuario2")
 	private List<Solicitud> solicituds2;
 
-	public int getIdUsuario() {
+	public Long getIdUsuario() {
 		return this.idUsuario;
 	}
 
-	public void setIdUsuario(int idUsuario) {
+	public void setIdUsuario(Long idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
@@ -98,19 +98,19 @@ public class Usuario implements Serializable {
 		this.correo = correo;
 	}
 
-	public int getEdad() {
+	public Long getEdad() {
 		return this.edad;
 	}
 
-	public void setEdad(int edad) {
+	public void setEdad(Long edad) {
 		this.edad = edad;
 	}
 
-	public int getEstado() {
+	public Long getEstado() {
 		return this.estado;
 	}
 
-	public void setEstado(int estado) {
+	public void setEstado(Long estado) {
 		this.estado = estado;
 	}
 

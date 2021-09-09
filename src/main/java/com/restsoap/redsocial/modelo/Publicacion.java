@@ -14,7 +14,7 @@ public class Publicacion implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_publicacion",nullable=false)
-	private int idPublicacion;
+	private Long idPublicacion;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
@@ -33,11 +33,11 @@ public class Publicacion implements Serializable {
 	@JoinColumn(name="id_usuario")
 	private Usuario usuario;
 
-	public int getIdPublicacion() {
+	public Long getIdPublicacion() {
 		return this.idPublicacion;
 	}
 
-	public void setIdPublicacion(int idPublicacion) {
+	public void setIdPublicacion(Long idPublicacion) {
 		this.idPublicacion = idPublicacion;
 	}
 

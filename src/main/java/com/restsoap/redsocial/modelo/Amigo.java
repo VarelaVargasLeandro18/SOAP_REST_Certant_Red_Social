@@ -13,7 +13,7 @@ public class Amigo implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_amigo",nullable=false)
-	private int idAmigo;
+	private Long idAmigo;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
@@ -28,11 +28,11 @@ public class Amigo implements Serializable {
 	@JoinColumn(name="id_usuarioR")
 	private Usuario usuario2;
 
-	public int getIdAmigo() {
+	public Long getIdAmigo() {
 		return this.idAmigo;
 	}
 
-	public void setIdAmigo(int idAmigo) {
+	public void setIdAmigo(Long idAmigo) {
 		this.idAmigo = idAmigo;
 	}
 

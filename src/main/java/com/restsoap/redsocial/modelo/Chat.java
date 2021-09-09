@@ -13,7 +13,7 @@ public class Chat implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_chat",nullable=false)
-	private int idChat;
+	private Long idChat;
 
 	/** Bi-directional many-to-one association to Usuario. */
 	@ManyToOne
@@ -29,11 +29,11 @@ public class Chat implements Serializable {
 	@OneToMany(mappedBy="chat")
 	private List<Mensaje> mensajes;
 
-	public int getIdChat() {
+	public Long getIdChat() {
 		return this.idChat;
 	}
 
-	public void setIdChat(int idChat) {
+	public void setIdChat(Long idChat) {
 		this.idChat = idChat;
 	}
 

@@ -15,7 +15,7 @@ public class Administrador implements Serializable {
 
 	@Id
 	@Column(name="id_administrador")
-	private int idAdministrador;
+	private Long idAdministrador;
 
 	private String clave;
 
@@ -24,11 +24,11 @@ public class Administrador implements Serializable {
 	public Administrador() {
 	}
 
-	public int getIdAdministrador() {
+	public Long getIdAdministrador() {
 		return this.idAdministrador;
 	}
 
-	public void setIdAdministrador(int idAdministrador) {
+	public void setIdAdministrador(Long idAdministrador) {
 		this.idAdministrador = idAdministrador;
 	}
 

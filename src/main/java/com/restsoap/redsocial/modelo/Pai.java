@@ -13,7 +13,7 @@ public class Pai implements Serializable {
 
 	@Id
 	@Column(name="id_pais")
-	private int idPais;
+	private Long idPais;
 
 	private String nombre;
 
@@ -21,11 +21,11 @@ public class Pai implements Serializable {
 	@OneToMany(mappedBy="pai")
 	private List<Ciudad> ciudads;
 
-	public int getIdPais() {
+	public Long getIdPais() {
 		return this.idPais;
 	}
 
-	public void setIdPais(int idPais) {
+	public void setIdPais(Long idPais) {
 		this.idPais = idPais;
 	}
 

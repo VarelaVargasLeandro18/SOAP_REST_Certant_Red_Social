@@ -11,7 +11,7 @@ public class Ciudad implements Serializable {
 
 	@Id
 	@Column(name="id_ciudad")
-	private int idCiudad;
+	private Long idCiudad;
 
 	private String nombre;
 
@@ -20,11 +20,11 @@ public class Ciudad implements Serializable {
 	@JoinColumn(name="id_pais")
 	private Pai pai;
 
-	public int getIdCiudad() {
+	public Long getIdCiudad() {
 		return this.idCiudad;
 	}
 
-	public void setIdCiudad(int idCiudad) {
+	public void setIdCiudad(Long idCiudad) {
 		this.idCiudad = idCiudad;
 	}
 

@@ -13,7 +13,7 @@ public class Mensaje implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_mensaje",nullable=false)
-	private int idMensaje;
+	private Long idMensaje;
 
 	private String envia;
 
@@ -28,11 +28,11 @@ public class Mensaje implements Serializable {
 	@JoinColumn(name="id_chat")
 	private Chat chat;
 
-	public int getIdMensaje() {
+	public Long getIdMensaje() {
 		return this.idMensaje;
 	}
 
-	public void setIdMensaje(int idMensaje) {
+	public void setIdMensaje(Long idMensaje) {
 		this.idMensaje = idMensaje;
 	}
 

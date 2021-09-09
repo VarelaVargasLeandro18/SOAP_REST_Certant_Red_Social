@@ -13,7 +13,7 @@ public class Comentario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_comentario",nullable=false)
-	private int idComentario;
+	private Long idComentario;
 
 	private String comentario;
 
@@ -30,11 +30,11 @@ public class Comentario implements Serializable {
 	@JoinColumn(name="id_usuario")
 	private Usuario usuario;
 
-	public int getIdComentario() {
+	public Long getIdComentario() {
 		return this.idComentario;
 	}
 
-	public void setIdComentario(int idComentario) {
+	public void setIdComentario(Long idComentario) {
 		this.idComentario = idComentario;
 	}
 
