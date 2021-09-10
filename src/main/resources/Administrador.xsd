@@ -7,9 +7,9 @@
 
 <xs:complexType name="administrador">
 	<xs:sequence>
-		<xs:element type="xs:int" name="id"/>
+		<xs:element type="xs:long" nillable="true" name="id"/>
 		<xs:element type="xs:string" name="correo"/>
-		<xs:element type="xs:int" name="clave"/>
+		<xs:element type="xs:string" name="clave"/>
 	</xs:sequence>
 </xs:complexType>
 
