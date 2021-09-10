@@ -7,8 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="adminRestController" class="com.restsoap.redsocial.rest.RestControllerAdministrador">
-		<constructor-arg index="0"></constructor-arg>
+	<bean id="adminRestController" class="com.restsoap.redsocial.rest.AdministradorREST">
+		<constructor-arg index="0" ref="adminService"></constructor-arg>
 	</bean>
 		
 	<bean id="adminService" class="com.restsoap.redsocial.services.ServiceAdministrador">

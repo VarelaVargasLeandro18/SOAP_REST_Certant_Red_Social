@@ -2,9 +2,12 @@ package com.restsoap.redsocial.dao;
 
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Component;
+
 import com.restsoap.redsocial.dao.interfaces.IDAOAdministrador;
 import com.restsoap.redsocial.modelo.Administrador;
 
+@Component("adminDAO")
 public class AdministradorDAO extends AbstractDAO<Administrador, Long> implements IDAOAdministrador {
 
 	public AdministradorDAO() {
