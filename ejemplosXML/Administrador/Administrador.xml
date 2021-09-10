@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<administrador>
+	<id>1</id>
+	<correo>admin@root.com</correo>
+	<clave>12345</clave>
+</administrador>
+
+<!-- INICIAR SESION -->
+	<iniciarSesionRequest>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</iniciarSesionRequest>
+	
+	<iniciarSesionResponse>
+		<administrador>
+			<id>1</id>
+			<correo>admin@root.com</correo>
+			<clave>12345</clave>
+		</administrador>
+	</iniciarSesionResponse>
+<!-- END OF INICIAR SESION -->
+
+<!-- GETADMINISTRADOR -->
+<getAdministradorRequest>
+	<id>1</id>
+</getAdministradorRequest>
+
+<getAdministradorResponse>
+	<administrador>
+		<id>1</id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</getAdministradorResponse>
+<!-- END OF GETADMINISTRADOR -->
+
+<!-- GET TODOS LOS ADMINISTRADORES -->
+<getTodosLosAdministradoresRequest>
+</getTodosLosAdministradoresRequest>
+
+<getTodosLosAdministradoresResponse>
+	<list>
+		<administrador>
+			<id>1</id>
+			<correo>admin@root.com</correo>
+			<clave>12345</clave>
+		</administrador>
+		<administrador>
+			<id>2</id>
+			<correo>admin2@root.com</correo>
+			<clave>12345</clave>
+		</administrador>
+	</list>
+</getTodosLosAdministradoresResponse>
+<!-- END OF GETTODOSLOSADMINISTRADORES -->
+
+<!-- POST ADMINISTRADOR -->
+<postAdministradorRequest>
+	<administrador>
+		<id></id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</postAdministradorRequest>
+
+<postAdministradorResponse>
+	<administrador>
+		<id>1</id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</postAdministradorResponse>
+<!-- END OF POSTADMINISTADOR-->
+
+<!-- DELETEADMINISTRADOR-->
+<deleteAdministradorRequest>
+	<id>1</id>
+</deleteAdministradorRequest>
+
+<deleteAdministradorResponse>
+	<administrador>
+		<id>1</id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</deleteAdministradorResponse>
+<!-- END OF DELETEADMINISTRADOR-->
+
+<putAdministradorRequest>
+	<administrador>
+		<id></id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</putAdministradorRequest>
+
+<putAdministradorResponse>
+	<administrador>
+		<id></id>
+		<correo>admin@root.com</correo>
+		<clave>12345</clave>
+	</administrador>
+</putAdministradorResponse>

@@ -48,6 +48,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.26</version>
 		</dependency>
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -55,6 +59,27 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.5.0</version>
+				<executions>
+			        <execution>
+			            <id>xjc</id>
+			            <goals>
+			                <goal>xjc</goal>
+			            </goals>
+			        </execution>
+    			</executions>
+			    <configuration>
+			    	<packageName>com.restsoap.redsocial.soap.administrador</packageName>
+			        <outputDirectory>src/main/java/</outputDirectory>
+			        <sources>
+			            <source>src/main/resources/Administrador.xsd</source>
+			        </sources>
+			        <clearOutputDir>false</clearOutputDir>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>

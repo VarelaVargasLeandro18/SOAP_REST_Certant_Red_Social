@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/Administrador" 
+	xmlns:tns="http://www.example.org/Administrador" 
+	elementFormDefault="qualified">
+
+<xs:complexType name="administrador">
+	<xs:sequence>
+		<xs:element type="xs:int" name="id"/>
+		<xs:element type="xs:string" name="correo"/>
+		<xs:element type="xs:int" name="clave"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:element name="getAdministradorRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element type="xs:int" name="id"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="getAdministradorResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="administrador" type="tns:administrador"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+
+
+</xs:schema>
