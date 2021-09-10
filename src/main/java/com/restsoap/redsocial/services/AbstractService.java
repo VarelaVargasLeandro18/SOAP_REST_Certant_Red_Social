@@ -9,12 +9,16 @@ import com.restsoap.redsocial.dao.exceptions.UpdateEntityException;
 import com.restsoap.redsocial.dao.interfaces.IDAO;
 import com.restsoap.redsocial.services.interfaces.IService;
 
-public class AbstractService<T, K> implements IService<T, K> {
+public abstract class AbstractService<T, K> implements IService<T, K> {
 	
 	private final IDAO<T, K> dao;
 	
 	public AbstractService( IDAO<T, K> dao ) {
 		this.dao = dao;
+	}
+	
+	protected IDAO<T,K> getDao() {
+		return this.dao;
 	}
 
 	@Override

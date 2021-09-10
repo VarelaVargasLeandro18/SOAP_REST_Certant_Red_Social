@@ -7,8 +7,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="java"/>
-	
-	
+	<bean id="adminRestController" class="com.restsoap.redsocial.rest.RestControllerAdministrador">
+		<constructor-arg index="0"></constructor-arg>
+	</bean>
+		
+	<bean id="adminService" class="com.restsoap.redsocial.services.ServiceAdministrador">
+		<constructor-arg index="0" ref="adminDAO"></constructor-arg>
+	</bean>
+		
+	<bean id="adminDAO" class="com.restsoap.redsocial.dao.AdministradorDAO" />
 
 </beans>
