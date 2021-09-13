@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema 
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://www.example.org/Administrador" 
-	xmlns:tns="http://www.example.org/Administrador" 
+	targetNamespace="http://www.soap-rest.org/Administrador/schema" 
+	xmlns:tns="http://www.soap-rest.org/Administrador/schema" 
 	elementFormDefault="qualified">
 
 <xs:complexType name="administrador">
@@ -28,7 +28,5 @@
 		</xs:sequence>
 	</xs:complexType>
 </xs:element>
-
-
 
 </xs:schema>

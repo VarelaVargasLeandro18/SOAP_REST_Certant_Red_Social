@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.restsoap.redsocial.dao.exceptions.CreateEntityException;
@@ -24,12 +25,12 @@ public interface IREST<T,K> {
 	public T getOne( @PathVariable K id ) throws ReadEntityException;
 	
 	@PostMapping
-	public T post( T object ) throws CreateEntityException;
+	public T post( @RequestBody T object ) throws CreateEntityException;
 	
 	@DeleteMapping("/{id}")
 	public void delete ( @PathVariable K id) throws ReadEntityException, DeleteEntityException;
 	
 	@PutMapping
-	public T put( T entity ) throws UpdateEntityException;
+	public T put( @RequestBody T entity ) throws UpdateEntityException;
 	
 }

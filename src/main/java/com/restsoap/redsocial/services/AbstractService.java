@@ -44,6 +44,7 @@ public abstract class AbstractService<T, K> implements IService<T, K> {
 
 	@Override
 	public T create(T entity) throws CreateEntityException {
+		System.out.println(entity);
 		return this.dao.create(entity);
 	}
 }
